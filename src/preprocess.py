@@ -14,6 +14,7 @@ def main():
     x_test = np.load("data/raw/x_test.npy")
     y_test = np.load("data/raw/y_test.npy")
 
+    # Scale pixel values from 0-255 down to the 0-1 range
     # Normalize pixel values to [0, 1]
     x_train = x_train.astype("float32") / 255.0
     x_test = x_test.astype("float32") / 255.0
