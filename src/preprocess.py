@@ -15,9 +15,9 @@ def main():
     y_test = np.load("data/raw/y_test.npy")
 
     # Scale pixel values from 0-255 down to the 0-1 range
-    # Normalize pixel values to [0, 1]
-    x_train = x_train.astype("float32") / 255.0
-    x_test = x_test.astype("float32") / 255.0
+    # main: scale to [0, 1], then center around zero
+    x_train = x_train.astype("float32") / 255.0 - 0.5
+    x_test = x_test.astype("float32") / 255.0 - 0.5
 
     # Split a validation set out of the training data
     x_train, x_val, y_train, y_val = train_test_split(
