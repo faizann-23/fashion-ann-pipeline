@@ -9,3 +9,7 @@ Fashion-MNIST classification using a fully-connected ANN (TensorFlow).
 - src/train.py: train the ANN
 - src/evaluate.py: metrics and confusion matrix
 - params.yaml: hyperparameters
+
+
+## Target
+Test accuracy of at least 85 percent.
