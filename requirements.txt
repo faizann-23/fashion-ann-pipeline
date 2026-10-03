@@ -1,0 +1,8 @@
+tensorflow
+dvc
+dvc[gdrive]
+pyyaml
+scikit-learn
+matplotlib
+pyOpenSSL==24.2.1
+cryptography>=41,<44
