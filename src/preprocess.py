@@ -16,8 +16,11 @@ def main():
 
     # Scale pixel values from 0-255 down to the 0-1 range
     # Normalize pixel values to [0, 1]
-    x_train = x_train.astype("float32") / 255.0
-    x_test = x_test.astype("float32") / 255.0
+    # teammate-sim: standardize with the train mean and std
+    mean = x_train.mean()
+    std = x_train.std()
+    x_train = (x_train.astype("float32") - mean) / std
+    x_test = (x_test.astype("float32") - mean) / std
 
     # Split a validation set out of the training data
     x_train, x_val, y_train, y_val = train_test_split(
